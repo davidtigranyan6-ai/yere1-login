@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YERE1 | Roleplay</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background:
+        linear-gradient(120deg, rgba(5,9,18,.94), rgba(10,15,28,.78)),
+        radial-gradient(circle at 75% 35%, #263b58, #080c15 70%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(220,45,65,.16);
+    border-radius: 50%;
+    right: -180px;
+    top: -150px;
+    box-shadow: 0 0 100px rgba(220,45,65,.12);
+}
+
+.container {
+    width: 420px;
+    max-width: 92%;
+    padding: 45px;
+    background: rgba(13,19,31,.94);
+    border: 1px solid rgba(255,255,255,.10);
+    border-top: 2px solid #c92d42;
+    box-shadow: 0 25px 90px rgba(0,0,0,.55);
+    position: relative;
+}
+
+.logo {
+    text-align: center;
+    font-size: 43px;
+    font-weight: 900;
+    letter-spacing: 9px;
+    color: white;
+}
+
+.logo span {
+    color: #d63249;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8ba0;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin: 12px 0 35px;
+}
+
+h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #8792a5;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 14px;
+    background: #090f1b;
+    border: 1px solid #273247;
+    outline: none;
+    color: white;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #d63249;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #c92d42;
+    border: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    background: #ed4057;
+    transform: translateY(-2px);
+}
+
+.switch {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 13px;
+    color: #8792a5;
+}
+
+.switch a {
+    color: #e33b51;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer {
+    margin-top: 35px;
+    text-align: center;
+    color: #536078;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.hidden {
+    display: none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="logo">YERE<span>1</span></div>
+    <div class="subtitle">YEREVAN ROLEPLAY</div>
+
+    <div id="login">
+        <h2>Բարի վերադարձ</h2>
+        <p class="description">Մուտք գործիր քո խաղային հաշիվ</p>
+
+        <input type="text" placeholder="Խաղացողի անուն">
+        <input type="password" placeholder="Գաղտնաբառ">
+
+        <button onclick="demo()">ՄՈՒՏՔ ԳՈՐԾԵԼ</button>
+
+        <div class="switch">
+            Հաշիվ չունե՞ս։
+            <a onclick="showRegister()">Գրանցվել</a>
+        </div>
+    </div>
+
+    <div id="register" class="hidden">
+        <h2>Ստեղծիր հաշիվ</h2>
+        <p class="description">Միացիր YERE1 համայնքին</p>
+
+        <input type="text" placeholder="Խաղացողի անուն">
+        <input type="email" placeholder="Էլեկտրոնային փոստ">
+        <input type="password" placeholder="Գաղտնաբառ">
+
+        <button onclick="demo()">ԳՐԱՆՑՎԵԼ</button>
+
+        <div class="switch">
+            Արդեն ունե՞ս հաշիվ։
+            <a onclick="showLogin()">Մուտք գործել</a>
+        </div>
+    </div>
+
+    <div class="footer">YERE1 ROLEPLAY PROJECT</div>
+</div>
+
+<script>
+function showRegister() {
+    document.getElementById("login").classList.add("hidden");
+    document.getElementById("register").classList.remove("hidden");
+}
+
+function showLogin() {
+    document.getElementById("register").classList.add("hidden");
+    document.getElementById("login").classList.remove("hidden");
+}
+
+function demo() {
+    alert("YERE1 authentication system is not connected yet.");
+}
+</script>
+</body>
+</html>
